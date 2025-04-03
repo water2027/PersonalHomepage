@@ -1,10 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Load particles.js
     particlesJS.load('particles-js', 'particles.json', function() {
         console.log('particles.js loaded - callback');
     });
 
-    // Fallback if loading from file fails
     setTimeout(function() {
         if (!window.pJSDom) {
             particlesJS('particles-js', {
@@ -114,4 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }, 1000);
+    
+    document.getElementById('current-year').textContent = new Date().getFullYear();
 });
